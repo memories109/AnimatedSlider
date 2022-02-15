@@ -1,4 +1,9 @@
-const { useRef, useState, useEffect, style, Fragment, forwardRef, Component, createRef} = React;
+import React, { useRef, useState, useEffect, style, Fragment, forwardRef, Component, createRef } from "react";
+import { gsap } from "gsap";
+import { Draggable } from "gsap/Draggable";
+import "./App.css";
+
+//const { useRef, useState, useEffect, style, Fragment, forwardRef, Component, createRef} = React;
 
 const onloadAnimation = controls => {
   const tl = gsap.timeline();
@@ -393,7 +398,8 @@ const Overlay = forwardRef((props, ref) => {
 
   useEffect(() => {
     // Enable dragging
-    new Draggable(".overlay-preview-wrap", {
+    gsap.registerPlugin(Draggable);
+    Draggable.create(".overlay-preview-wrap", {
       type: "x",
       bounds: ".overlay-slide-container",
       dragResistance: 0.55,
@@ -810,4 +816,4 @@ class App extends Component {
   }
 }
 
-ReactDOM.render(<App />, document.getElementById("app"));
+export default App;
