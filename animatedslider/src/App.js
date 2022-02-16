@@ -16,11 +16,7 @@ const onloadAnimation = controls => {
     .fromTo(".slide-title", { y: "200%" }, { y: 0, duration: 0.64 }, "in")
     .to(".slide-info-container", { opacity: 1 }, "in+=0.64")
     // info box
-    .to(
-      ".slide-info-box",
-      { "clip-path": "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)" },
-      "in+=0.64"
-    )
+    
     .to(".slide-info-box a", { opacity: 1 }, "in+=0.82")
     .to(".slide-info-box h4", { opacity: 1 }, "in+=0.82")
     // controls -
@@ -526,7 +522,7 @@ const Navbar = forwardRef((props,ref) => {
                 <span className="toggle-bar"></span>
             </button>
             <div className="brand">
-                <a href="/">ARK-SHELTER</a>
+                <a href="/">CUSTOME</a>
             </div>
             <div className="nav-center">
             <ul>
@@ -801,10 +797,10 @@ class App extends Component {
               <h4>Scroll for more</h4>
             </div>
           </div>
-          <div className="slide-info-box">
+          {/* <div className="slide-info-box">
             <a href="/#">Need more info &amp; prices?</a>
             <h4>Download our brochure now</h4>
-          </div>
+          </div> */}
         </div>
         <Overlay
           close={this.expand}
