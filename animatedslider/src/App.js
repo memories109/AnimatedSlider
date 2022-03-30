@@ -594,6 +594,7 @@ class App extends Component {
     imgsLoaded: 0,
     isLoaded: false
   };
+  
 
   titleWrapRef = createRef();
   numberWrapRef = createRef();
