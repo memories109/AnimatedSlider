@@ -545,7 +545,7 @@ const Navbar = forwardRef((props,ref) => {
 
 
 const SliderControls = forwardRef((props, ref) => {
-  return (
+  return (   
     <div className="slider-controls" ref={ref}>
       <button className="slide-prev-btn" onClick={props.prev}></button>
       <button className="slide-next-btn" onClick={props.next}></button>
