@@ -541,7 +541,7 @@ const Navbar = forwardRef((props,ref) => {
     </header>
     )
 });
- 
+  
 
 
 const SliderControls = forwardRef((props, ref) => {
